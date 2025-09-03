@@ -15,7 +15,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-[#F4F5F7] h-[100vh] ">
+<body class="bg-[#F4F5F7] min-h-[100vh]">
 
     <section class="max-w-lg mx-auto bg-white rounded-b-xl">
         <!-- header section  -->
@@ -23,7 +23,7 @@
             <div class="flex">
                 <img class="h-[50px]" src="assets/Group.png" alt="">
                 <div class="ml-3">
-                    <h2 class="font-bold">$<span>45000</span></h2>
+                    <h2 class="font-bold">$<span id="available-balance">45000</span></h2>
                     <p class="text-[#08080895]">Available Balance</p>
                 </div>
             </div>
@@ -74,8 +74,8 @@
         <form class=" bg-white rounded-xl p-5">
             <div>
                 <label class="font-semibold" for="">Select a bank</label>
-                <select class="select input bg-[#F4F5F7] mt-3 rounded-3xl w-full mb-4">
-                    <option>Pick a bank</option>
+                <select id="select-bank" class="select input bg-[#F4F5F7] mt-3 rounded-3xl w-full mb-4">
+                    <option>Select bank</option>
                     <option>Dutch Bangla Bank</option>
                     <option>IFIC Bank</option>
                     <option>Premier Bank</option> mb-4
@@ -88,25 +88,29 @@
             <div>
                 <label class="font-semibold" for="">Bank Account Number</label>
                 <br>
-                <input type="text" placeholder="Enter 11 digit account number" id="mobile-number"
+                <input id="bank-account-number" type="text" placeholder="Enter 11 digit account number"
                     class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
             </div>
             <div>
                 <label class="font-semibold" for="">Amount to Add</label>
                 <br>
-                <input type="text" placeholder="Add amount" id="mobile-number"
+                <input id="add-amount" type="text" placeholder="Add amount"
                     class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
             </div>
             <div>
                 <label class="font-semibold" for="">Pin Number</label>
                 <br>
-                <input type="text" placeholder="Enter 4 digit pin number" id="mobile-number"
+                <input id="pin-number" type="text" placeholder="Enter 4 digit pin number"
                     class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
             </div>
-            <button id="" class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Add
+            <button id="add-money-btn"
+                class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Add
                 Money</button>
         </form>
     </div>
+
+    <!-- Js file  -->
+    <script src="js/home.js"></script>
 </body>
 
 </html>

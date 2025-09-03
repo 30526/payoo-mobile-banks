@@ -3,7 +3,7 @@ document.getElementById('login-btn')
     .addEventListener('click', function (event) {
         event.preventDefault()
         // mobile & pin Number 
-        const mobileNumber = 123456789
+        const mobileNumber = 12345678910
         const pin = 1234
         // Mobile number to Int 
         const mobileNumberValue = document.getElementById('mobile-number').value
@@ -12,7 +12,7 @@ document.getElementById('login-btn')
         const pinNumberValue = document.getElementById('pin-number').value
         const pinNumberValueInt = parseInt(pinNumberValue)
 
-        if (mobileNumberValueInt === 123456789 && pinNumberValueInt === 1234) {
+        if (mobileNumberValueInt === 12345678910 && pinNumberValueInt === 1234) {
             window.location.href = "./home.html"
         }
         else {
