@@ -13,9 +13,9 @@ document.getElementById('login-btn')
         const pinNumberValueInt = parseInt(pinNumberValue)
 
         if (mobileNumberValueInt === 123456789 && pinNumberValueInt === 1234) {
-            console.log('Login Successful')
+            window.location.href = "./home.html"
         }
         else {
-            console.log('Login Failed')
+            alert('Invalid Mobile Number or Pin')
         }
     })
