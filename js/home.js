@@ -29,17 +29,52 @@ document.getElementById('logout-btn')
     })
 
 
+
+// cash out section 
+
+
+document.getElementById('withdraw-money-btn')
+    .addEventListener('click', function (event) {
+        event.preventDefault()
+        const agentNumber = document.getElementById('agent').value
+        if (agentNumber.length < 11) {
+            alert('Please, provide a valid number')
+            return;
+        }
+        const validPin2 = 1234
+        const pinNumber2 = parseInt(document.getElementById('pin-number-2').value)
+        if (validPin2 !== pinNumber2) {
+            alert('Please, enter a valid pin number')
+            return;
+        }
+
+        const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value)
+        console.log(withdrawAmount)
+        const availableBalance2 = parseInt(document.getElementById('available-balance').innerText)
+        console.log(availableBalance2)
+        const balanceAfterCashOut = availableBalance2 - withdrawAmount
+        document.getElementById('available-balance').innerText = balanceAfterCashOut
+    })
+
+
+
+
 // Toggle 
-
 const addMoneyCard = document.getElementById('add-money-card')
-
 const cashOutCard = document.getElementById('cash-out-card')
 
 addMoneyCard.addEventListener('click', function () {
     document.getElementById('add-money-section').style.display = 'block'
     document.getElementById('cash-out-section').style.display = 'none'
+
+    document.getElementById('add-money-card').style.border = '2px solid #0874F2'
+    document.getElementById('cash-out-card').style.border = '2px solid #08080848'
+
 })
 cashOutCard.addEventListener('click', function () {
     document.getElementById('add-money-section').style.display = 'none'
     document.getElementById('cash-out-section').style.display = 'block'
+
+    document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
+    document.getElementById('add-money-card').style.border = '2px solid #08080848'
 })
