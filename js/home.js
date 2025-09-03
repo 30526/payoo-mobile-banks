@@ -3,8 +3,7 @@ document.getElementById('add-money-btn')
         event.preventDefault()
         const selectBank = document.getElementById('select-bank').value
         const bankAccountNumber = document.getElementById('bank-account-number').value
-        const bankAccountNumberInt = parseInt(bankAccountNumber)
-        if (bankAccountNumberInt.length < 11) {
+        if (bankAccountNumber.length < 11) {
             alert('Please, provide a valid account number')
             return;
         }
