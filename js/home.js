@@ -22,3 +22,9 @@ document.getElementById('add-money-btn')
         const newBalance = availableBalance + addAmountInt
         document.getElementById('available-balance').innerText = newBalance
     })
+
+// Log out btn 
+document.getElementById('logout-btn')
+    .addEventListener('click', function () {
+        window.location.href = "./index.html"
+    })
