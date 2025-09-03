@@ -27,3 +27,19 @@ document.getElementById('logout-btn')
     .addEventListener('click', function () {
         window.location.href = "./index.html"
     })
+
+
+// Toggle 
+
+const addMoneyCard = document.getElementById('add-money-card')
+
+const cashOutCard = document.getElementById('cash-out-card')
+
+addMoneyCard.addEventListener('click', function () {
+    document.getElementById('add-money-section').style.display = 'block'
+    document.getElementById('cash-out-section').style.display = 'none'
+})
+cashOutCard.addEventListener('click', function () {
+    document.getElementById('add-money-section').style.display = 'none'
+    document.getElementById('cash-out-section').style.display = 'block'
+})
