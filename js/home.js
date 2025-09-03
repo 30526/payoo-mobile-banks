@@ -4,14 +4,19 @@ document.getElementById('add-money-btn')
         const selectBank = document.getElementById('select-bank').value
         const bankAccountNumber = document.getElementById('bank-account-number').value
         const bankAccountNumberInt = parseInt(bankAccountNumber)
-        if (bankAccountNumber.length < 11) {
-            alert('Please provide a valid account number')
+        if (bankAccountNumberInt.length < 11) {
+            alert('Please, provide a valid account number')
             return;
         }
         const addAmount = document.getElementById('add-amount').value
         const addAmountInt = parseInt(addAmount)
+        const validPin = 1234;
         const pinNumber = document.getElementById('pin-number').value
         const pinNumberInt = parseInt(pinNumber)
+        if (pinNumberInt !== validPin) {
+            alert('Please, provide a valid pin')
+            return;
+        }
 
         const availableBalance = parseInt(document.getElementById('available-balance').innerText)
         const newBalance = availableBalance + addAmountInt
