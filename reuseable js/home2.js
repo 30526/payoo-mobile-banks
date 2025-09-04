@@ -1,3 +1,9 @@
+// Log out btn 
+document.getElementById('logout-btn')
+    .addEventListener('click', function () {
+        window.location.href = "./index.html"
+    })
+
 // Common function to get input number 
 function getInputValueNumber(id) {
     const inputValueNumber = parseInt(document.getElementById(id).value)
