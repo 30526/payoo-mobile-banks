@@ -92,21 +92,89 @@ document.getElementById('withdraw-money-btn')
 
 
 // Toggle 
-const addMoneyCard = document.getElementById('add-money-card')
-const cashOutCard = document.getElementById('cash-out-card')
 
-addMoneyCard.addEventListener('click', function () {
-    document.getElementById('add-money-section').style.display = 'block'
-    document.getElementById('cash-out-section').style.display = 'none'
+// add money button 
+document.getElementById('add-money-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('add-money-section').style.display = 'block'
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            card.style.border = '2px solid #08080848'
+            card.style.backgroundColor = 'white'
+        }
+        document.getElementById('add-money-card').style.border = '2px solid #0874F2'
+        document.getElementById('add-money-card').style.backgroundColor = '#0874F220'
+    })
 
-    document.getElementById('add-money-card').style.border = '2px solid #0874F2'
-    document.getElementById('cash-out-card').style.border = '2px solid #08080848'
+// cash out button 
+document.getElementById('cash-out-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('cash-out-section').style.display = 'block'
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            card.style.border = '2px solid #08080848'
+            card.style.backgroundColor = 'white'
+        }
+        document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
+        document.getElementById('cash-out-card').style.backgroundColor = '#0874F220'
+    })
 
-})
-cashOutCard.addEventListener('click', function () {
-    document.getElementById('add-money-section').style.display = 'none'
-    document.getElementById('cash-out-section').style.display = 'block'
+// Transfer money  
+document.getElementById('transfer-money-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('transfer-money-section').style.display = 'block'
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            card.style.border = '2px solid #08080848'
+            card.style.backgroundColor = 'white'
+        }
+        document.getElementById('transfer-money-card').style.border = '2px solid #0874F2'
+        document.getElementById('transfer-money-card').style.backgroundColor = '#0874F220'
+    })
 
-    document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
-    document.getElementById('add-money-card').style.border = '2px solid #08080848'
-})
+
+// get bonus
+document.getElementById('get-bonus-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('get-bonus-section').style.display = 'block'
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            card.style.border = '2px solid #08080848'
+            card.style.backgroundColor = 'white'
+        }
+        document.getElementById('get-bonus-card').style.border = '2px solid #0874F2'
+        document.getElementById('get-bonus-card').style.backgroundColor = '#0874F220'
+    })
+
+// pay bill
+document.getElementById('pay-bill-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('pay-bill-section').style.display = 'block'
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            card.style.border = '2px solid #08080848'
+            card.style.backgroundColor = 'white'
+        }
+        document.getElementById('pay-bill-card').style.border = '2px solid #0874F2'
+        document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
+    })
