@@ -43,6 +43,11 @@ document.getElementById('add-money-btn')
 
         // Add money 
         const addMoney = getInputValueNumber('add-amount')
+        // validation 
+        if (addMoney <= 0) {
+            alert('Invalid amount')
+            return;
+        }
 
         // pin Number 
         const pinNumber = getInputValueNumber('pin-number')
@@ -84,6 +89,16 @@ document.getElementById('withdraw-money-btn')
         // withdraw money
         const withdrawMoney = getInputValueNumber('withdraw-amount')
 
+        // new balance 
+        const availableBalance = balance('available-balance')
+        // validation
+        if (availableBalance < withdrawMoney || withdrawMoney <= 0) {
+            alert('Insufficient balance')
+            return;
+        }
+        const newBalance = availableBalance - withdrawMoney
+        innerText(newBalance)
+
         // pin Number 
         const pinNumber = getInputValueNumber('pin-number-2')
         // pin condition 
@@ -92,11 +107,6 @@ document.getElementById('withdraw-money-btn')
             alert('Please, enter a valid pin')
             return;
         }
-
-        // new balance 
-        const availableBalance = balance('available-balance')
-        const newBalance = availableBalance - withdrawMoney
-        innerText(newBalance)
 
         // push history to transaction data 
         const data = {
@@ -107,14 +117,17 @@ document.getElementById('withdraw-money-btn')
 
     })
 
-// transactions section 
+// transactions history section 
 document.getElementById('transactions-card')
     .addEventListener('click', function () {
         const transactionHistoryContainer = document.getElementById('transactions-history-container')
         transactionHistoryContainer.innerText = ''
-        for (const data of transactionsData) {
-            const div = document.createElement('div')
 
+        // looping through every add money or cash out data 
+        for (const data of transactionsData) {
+            // creating a card for history 
+            const div = document.createElement('div')
+            // adding the html structure of card into the div 
             div.innerHTML = `
 
                  <div class="bg-white rounded-xl p-3 flex justify-between items-center border-1 border-[#08080820] mb-3">
@@ -129,8 +142,8 @@ document.getElementById('transactions-card')
             </div>
                 <span class="mr-3"><i class="fa-solid fa-ellipsis-vertical"></i></span>
         </div>
-
         `
+            // appending the new history to the history container 
             transactionHistoryContainer.appendChild(div)
 
         }
