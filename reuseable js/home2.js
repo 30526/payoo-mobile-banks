@@ -4,7 +4,7 @@ document.getElementById('logout-btn')
         window.location.href = "./index.html"
     })
 
-// Common function to get input number 
+// Common functions to get input number 
 function getInputValueNumber(id) {
     const inputValueNumber = parseInt(document.getElementById(id).value)
     return inputValueNumber;
@@ -18,6 +18,12 @@ function getInputValue(id) {
 function balance(id) {
     const inputValue = parseInt(document.getElementById(id).innerText)
     return inputValue;
+}
+
+
+function innerText(value) {
+    const getBalance = document.getElementById('available-balance')
+    getBalance.innerText = value
 }
 
 // Cash In section 
@@ -48,7 +54,7 @@ document.getElementById('add-money-btn')
         // new balance 
         const availableBalance = balance('available-balance')
         const newBalance = availableBalance + addMoney
-        document.getElementById('available-balance').innerText = newBalance
+        innerText(newBalance)
     })
 
 
@@ -80,7 +86,7 @@ document.getElementById('withdraw-money-btn')
         // new balance 
         const availableBalance = balance('available-balance')
         const newBalance = availableBalance - withdrawMoney
-        document.getElementById('available-balance').innerText = newBalance
+        innerText(newBalance)
     })
 
 
