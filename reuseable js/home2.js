@@ -151,22 +151,15 @@ document.getElementById('transactions-card')
 
 
 // latest payment section 
-document.getElementById('latest-payment-button')
-    .addEventListener('click', function () {
-        const forms = document.getElementsByClassName('form')
-        for (const form of forms) {
-            form.style.display = 'none'
-        }
-        document.getElementById('latest-payments-section').style.display = 'block'
-    })
+
 
 document.getElementById('latest-payment-button')
     .addEventListener('click', function () {
-        const latestPayments = document.getElementById('latests-payments-container')
+        const latestPayments = document.getElementById('latest-payments-container')
         latestPayments.innerText = ''
 
         // looping through every add money or cash out data 
-        const paymentsData = transactionsData.reverse()
+        const paymentsData = [...transactionsData].reverse();
         for (const data of paymentsData) {
             // creating a card for history 
             const div = document.createElement('div')
@@ -330,4 +323,14 @@ document.getElementById('transactions-card')
         // document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
         document.getElementById('transactions-card').classList.remove('border-[#08080848]')
         document.getElementById('transactions-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
+    })
+
+// latest payments 
+document.getElementById('latest-payment-button')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('latest-payments-section').style.display = 'block'
     })
