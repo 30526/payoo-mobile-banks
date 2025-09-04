@@ -58,6 +58,7 @@ document.getElementById('add-money-btn')
         const newBalance = availableBalance + addMoney
         innerText(newBalance)
 
+        // push history to transaction data 
         const data = {
             name: "Add Money",
             date: new Date().toLocaleTimeString()
@@ -97,15 +98,43 @@ document.getElementById('withdraw-money-btn')
         const newBalance = availableBalance - withdrawMoney
         innerText(newBalance)
 
+        // push history to transaction data 
         const data = {
             name: "Cash Out",
             date: new Date().toLocaleTimeString()
         }
         transactionsData.push(data)
-        console.log(transactionsData)
+
     })
 
+// transactions section 
+document.getElementById('transactions-card')
+    .addEventListener('click', function () {
+        const transactionHistoryContainer = document.getElementById('transactions-history-container')
+        transactionHistoryContainer.innerText = ''
+        for (const data of transactionsData) {
+            const div = document.createElement('div')
 
+            div.innerHTML = `
+
+                 <div class="bg-white rounded-xl p-3 flex justify-between items-center border-1 border-[#08080820] mb-3">
+            <div class="flex gap-3">
+                <div class="rounded-full p-3  bg-[#F4F5F7] text-center flex">
+                    <img class="" src="assets/wallet1.png" alt="">
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-[#080808d8]">${data.name}</h3>
+                    <p class="text-sm text-[#08080895] font-normal">${data.date}</p>
+                </div>
+            </div>
+                <span class="mr-3"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+        </div>
+
+        `
+            transactionHistoryContainer.appendChild(div)
+
+        }
+    })
 
 
 
