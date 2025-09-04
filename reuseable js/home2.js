@@ -47,6 +47,35 @@ document.getElementById('add-money-btn')
 
 
 
+// Cash Out Section 
+document.getElementById('withdraw-money-btn')
+    .addEventListener('click', function (e) {
+        e.preventDefault()
+        // agent Number 
+        const agentNumber = getInputValue('agent')
+        // agent number condition 
+        if (agentNumber.length < 11 || agentNumber.length > 11) {
+            alert('Please, provide a valid account number')
+            return;
+        }
+
+        // withdraw money
+        const withdrawMoney = getInputValueNumber('withdraw-amount')
+
+        // pin Number 
+        const pinNumber = getInputValueNumber('pin-number-2')
+        // pin condition 
+        const validPin = 1234;
+        if (pinNumber !== validPin) {
+            alert('Please, enter a valid pin')
+            return;
+        }
+
+        // new balance 
+        const availableBalance = balance('available-balance')
+        const newBalance = availableBalance - withdrawMoney
+        document.getElementById('available-balance').innerText = newBalance
+    })
 
 
 
