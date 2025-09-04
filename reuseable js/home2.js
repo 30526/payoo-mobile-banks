@@ -26,6 +26,8 @@ function innerText(value) {
     getBalance.innerText = value
 }
 
+const transactionsData = []
+
 // Cash In section 
 
 document.getElementById('add-money-btn')
@@ -55,6 +57,13 @@ document.getElementById('add-money-btn')
         const availableBalance = balance('available-balance')
         const newBalance = availableBalance + addMoney
         innerText(newBalance)
+
+        const data = {
+            name: "Add Money",
+            date: new Date().toLocaleTimeString()
+        }
+        transactionsData.push(data)
+        console.log(transactionsData)
     })
 
 
@@ -87,7 +96,19 @@ document.getElementById('withdraw-money-btn')
         const availableBalance = balance('available-balance')
         const newBalance = availableBalance - withdrawMoney
         innerText(newBalance)
+
+        const data = {
+            name: "Cash Out",
+            date: new Date().toLocaleTimeString()
+        }
+        transactionsData.push(data)
+        console.log(transactionsData)
     })
+
+
+
+
+
 
 
 
@@ -202,4 +223,26 @@ document.getElementById('pay-bill-card')
         // document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
         document.getElementById('pay-bill-card').classList.remove('border-[#08080848]')
         document.getElementById('pay-bill-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
+    })
+
+// Transactions 
+document.getElementById('transactions-card')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('transactions-section').style.display = 'block'
+        // active status 
+        const cards = document.getElementsByClassName('card')
+        for (const card of cards) {
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
+        }
+        // document.getElementById('pay-bill-card').style.border = '2px solid #0874F2'
+        // document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
+        document.getElementById('transactions-card').classList.remove('border-[#08080848]')
+        document.getElementById('transactions-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
