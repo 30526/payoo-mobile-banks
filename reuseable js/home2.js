@@ -47,3 +47,25 @@ document.getElementById('add-money-btn')
 
 
 
+
+
+
+// Toggle 
+const addMoneyCard = document.getElementById('add-money-card')
+const cashOutCard = document.getElementById('cash-out-card')
+
+addMoneyCard.addEventListener('click', function () {
+    document.getElementById('add-money-section').style.display = 'block'
+    document.getElementById('cash-out-section').style.display = 'none'
+
+    document.getElementById('add-money-card').style.border = '2px solid #0874F2'
+    document.getElementById('cash-out-card').style.border = '2px solid #08080848'
+
+})
+cashOutCard.addEventListener('click', function () {
+    document.getElementById('add-money-section').style.display = 'none'
+    document.getElementById('cash-out-section').style.display = 'block'
+
+    document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
+    document.getElementById('add-money-card').style.border = '2px solid #08080848'
+})
