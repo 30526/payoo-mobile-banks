@@ -39,6 +39,9 @@
             <p class="text-[#08080895]">Enjoy easy and convenient financial services with us. Cashout charge is low and
             </p>
         </div>
+        <h2 id="latest-payment-button"
+            class="text-lg font-bold hover:cursor-pointer text-right mr-5 underline text-[#080808b2]">Latest
+            Payments</h2>
         <!-- Card section  -->
         <div class="min-h-[200px] grid grid-cols-3
      gap-4 p-5">
@@ -71,6 +74,14 @@
 
     <!-- All form section  -->
     <div>
+        <!-- latest Payment section  -->
+        <div id="latest-payments-section" class="form max-w-lg mx-auto p-5 hidden">
+
+            <h2 id="" class="font-bold mb-5">Latest Payments</h2>
+            <div id="latests-payments-container">
+                
+            </div>
+        </div>
         <!-- Add Money section  -->
         <div id="add-money-section" class="form max-w-lg mx-auto p-5">
             <h2 class="font-bold mb-5">Add Money</h2>
@@ -138,99 +149,100 @@
                     class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Withdraw</button>
             </form>
         </div>
-    </div>
 
-    <!-- Transfer money section  -->
-    <div id="transfer-money-section" class="form max-w-lg mx-auto p-5 hidden">
-        <h2 class="font-bold mb-5">Transfer Money</h2>
-        <form class=" bg-white rounded-xl p-5">
-            <div>
-                <label class="font-semibold" for="">Receiver Number</label>
-                <br>
-                <input id="" type="text" placeholder="Enter 11 digit number"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <div>
-                <label class="font-semibold" for="">Transfer Amount</label>
-                <br>
-                <input id="" type="text" placeholder="Amount to Withdraw"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <div>
-                <label class="font-semibold" for="">Pin Number</label>
-                <br>
-                <input id="" type="text" placeholder="Enter 4 digit pin number"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <button id="withdraw-money-btn"
-                class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Transfer</button>
-        </form>
-    </div>
-    </div>
 
-    <!-- Get bonus section  -->
-    <div id="get-bonus-section" class="form max-w-lg mx-auto p-5 hidden">
-        <h2 class="font-bold mb-5">Get Bonus</h2>
-        <form class=" bg-white rounded-xl p-5">
-            <div>
-                <label class="font-semibold" for="">Enter Bonus coupon</label>
-                <br>
-                <input id="" type="text" placeholder="Coupon number here"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-
-            <button id="" class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Get
-                Bonus</button>
-        </form>
-    </div>
-    </div>
-
-    <!-- Pay bill section  -->
-    <div id="pay-bill-section" class="form max-w-lg mx-auto p-5 hidden">
-        <h2 class="font-bold mb-5">Pay Bill</h2>
-        <form class=" bg-white rounded-xl p-5">
-            <div>
-                <label class="font-semibold" for="">Select a bank</label>
-                <select id="" class="select input bg-[#F4F5F7] mt-3 rounded-3xl w-full mb-4">
-                    <option>Select here</option>
-                    <option>Electricity Bill</option>
-                    <option>Gas Bill</option>
-                    <option>Wifi Bill</option> mb-4
-                    <option>Service Charge</option>
-                    <option>Transport Bill</option>
-                </select>
-            </div>
-            <div>
-                <label class="font-semibold" for="">Biller Account Number</label>
-                <br>
-                <input id="" type="text" placeholder="Enter 11 digit account number"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <div>
-                <label class="font-semibold" for="">Amount to Pay</label>
-                <br>
-                <input id="" type="text" placeholder="Add amount"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <div>
-                <label class="font-semibold" for="">Pin Number</label>
-                <br>
-                <input id="" type="text" placeholder="Enter 4 digit pin number"
-                    class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
-            </div>
-            <button id="" class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Pay
-                Bill</button>
-        </form>
-    </div>
-
-    <!-- Transactions sections  -->
-    <div id="transactions-section" class="form max-w-lg mx-auto p-5 hidden">
-        <div class="flex justify-between ">
-            <h2 class="font-bold mb-5">Transactions</h2>
-            <p class="font-bold text-[#08080895] hover:cursor-pointer text-sm mr-5">View all</p>
+        <!-- Transfer money section  -->
+        <div id="transfer-money-section" class="form max-w-lg mx-auto p-5 hidden">
+            <h2 class="font-bold mb-5">Transfer Money</h2>
+            <form class=" bg-white rounded-xl p-5">
+                <div>
+                    <label class="font-semibold" for="">Receiver Number</label>
+                    <br>
+                    <input id="" type="text" placeholder="Enter 11 digit number"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Transfer Amount</label>
+                    <br>
+                    <input id="" type="text" placeholder="Amount to Withdraw"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Pin Number</label>
+                    <br>
+                    <input id="" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <button id="withdraw-money-btn"
+                    class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Transfer</button>
+            </form>
         </div>
-        <div id="transactions-history-container">
 
+
+        <!-- Get bonus section  -->
+        <div id="get-bonus-section" class="form max-w-lg mx-auto p-5 hidden">
+            <h2 class="font-bold mb-5">Get Bonus</h2>
+            <form class=" bg-white rounded-xl p-5">
+                <div>
+                    <label class="font-semibold" for="">Enter Bonus coupon</label>
+                    <br>
+                    <input id="" type="text" placeholder="Coupon number here"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+
+                <button id="" class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Get
+                    Bonus</button>
+            </form>
+        </div>
+
+
+        <!-- Pay bill section  -->
+        <div id="pay-bill-section" class="form max-w-lg mx-auto p-5 hidden">
+            <h2 class="font-bold mb-5">Pay Bill</h2>
+            <form class=" bg-white rounded-xl p-5">
+                <div>
+                    <label class="font-semibold" for="">Select a bank</label>
+                    <select id="" class="select input bg-[#F4F5F7] mt-3 rounded-3xl w-full mb-4">
+                        <option>Select here</option>
+                        <option>Electricity Bill</option>
+                        <option>Gas Bill</option>
+                        <option>Wifi Bill</option> mb-4
+                        <option>Service Charge</option>
+                        <option>Transport Bill</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Biller Account Number</label>
+                    <br>
+                    <input id="" type="text" placeholder="Enter 11 digit account number"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Amount to Pay</label>
+                    <br>
+                    <input id="" type="text" placeholder="Add amount"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Pin Number</label>
+                    <br>
+                    <input id="" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#F4F5F7] mt-3 rounded-3xl mb-4 w-full" />
+                </div>
+                <button id="" class="btn text-white mt-5  w-full rounded-3xl font-semibold bg-[#0874F2] border-none">Pay
+                    Bill</button>
+            </form>
+        </div>
+
+        <!-- Transactions sections  -->
+        <div id="transactions-section" class="form max-w-lg mx-auto p-5 hidden">
+            <div class="flex justify-between ">
+                <h2 class="font-bold mb-5">Transactions</h2>
+                <p class="font-bold text-[#08080895] hover:cursor-pointer text-sm mr-5">View all</p>
+            </div>
+            <div id="transactions-history-container">
+
+            </div>
         </div>
     </div>
 

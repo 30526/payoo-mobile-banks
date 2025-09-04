@@ -26,6 +26,7 @@ function innerText(value) {
     getBalance.innerText = value
 }
 
+// transaction data 
 const transactionsData = []
 
 // Cash In section 
@@ -69,7 +70,6 @@ document.getElementById('add-money-btn')
             date: new Date().toLocaleTimeString()
         }
         transactionsData.push(data)
-        console.log(transactionsData)
     })
 
 
@@ -145,6 +145,49 @@ document.getElementById('transactions-card')
         `
             // appending the new history to the history container 
             transactionHistoryContainer.appendChild(div)
+
+        }
+    })
+
+
+// latest payment section 
+document.getElementById('latest-payment-button')
+    .addEventListener('click', function () {
+        const forms = document.getElementsByClassName('form')
+        for (const form of forms) {
+            form.style.display = 'none'
+        }
+        document.getElementById('latest-payments-section').style.display = 'block'
+    })
+
+document.getElementById('latest-payment-button')
+    .addEventListener('click', function () {
+        const latestPayments = document.getElementById('latests-payments-container')
+        latestPayments.innerText = ''
+
+        // looping through every add money or cash out data 
+        const paymentsData = transactionsData.reverse()
+        for (const data of paymentsData) {
+            // creating a card for history 
+            const div = document.createElement('div')
+            // adding the html structure of card into the div 
+            div.innerHTML = `
+
+                 <div class="bg-white rounded-xl p-3 flex justify-between items-center border-1 border-[#08080820] mb-3">
+            <div class="flex gap-3">
+                <div class="rounded-full p-3  bg-[#F4F5F7] text-center flex">
+                    <img class="" src="assets/wallet1.png" alt="">
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-[#080808d8]">${data.name}</h3>
+                    <p class="text-sm text-[#08080895] font-normal">${data.date}</p>
+                </div>
+            </div>
+                <span class="mr-3"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+        </div>
+        `
+            // appending the new history to the history container 
+            latestPayments.appendChild(div)
 
         }
     })
