@@ -101,13 +101,18 @@ document.getElementById('add-money-card')
             form.style.display = 'none'
         }
         document.getElementById('add-money-section').style.display = 'block'
+        // active status 
         const cards = document.getElementsByClassName('card')
         for (const card of cards) {
-            card.style.border = '2px solid #08080848'
-            card.style.backgroundColor = 'white'
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
         }
-        document.getElementById('add-money-card').style.border = '2px solid #0874F2'
-        document.getElementById('add-money-card').style.backgroundColor = '#0874F220'
+        // document.getElementById('add-money-card').style.border = '2px solid #0874F2'
+        // document.getElementById('add-money-card').style.backgroundColor = '#0874F220'
+        document.getElementById('add-money-card').classList.remove('border-[#08080848]')
+        document.getElementById('add-money-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
 
 // cash out button 
@@ -118,13 +123,18 @@ document.getElementById('cash-out-card')
             form.style.display = 'none'
         }
         document.getElementById('cash-out-section').style.display = 'block'
+        // active status 
         const cards = document.getElementsByClassName('card')
         for (const card of cards) {
-            card.style.border = '2px solid #08080848'
-            card.style.backgroundColor = 'white'
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
         }
-        document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
-        document.getElementById('cash-out-card').style.backgroundColor = '#0874F220'
+        // document.getElementById('cash-out-card').style.border = '2px solid #0874F2'
+        // document.getElementById('cash-out-card').style.backgroundColor = '#0874F220'
+        document.getElementById('cash-out-card').classList.remove('border-[#08080848]')
+        document.getElementById('cash-out-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
 
 // Transfer money  
@@ -135,13 +145,18 @@ document.getElementById('transfer-money-card')
             form.style.display = 'none'
         }
         document.getElementById('transfer-money-section').style.display = 'block'
+        // active status 
         const cards = document.getElementsByClassName('card')
         for (const card of cards) {
-            card.style.border = '2px solid #08080848'
-            card.style.backgroundColor = 'white'
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
         }
-        document.getElementById('transfer-money-card').style.border = '2px solid #0874F2'
-        document.getElementById('transfer-money-card').style.backgroundColor = '#0874F220'
+        // document.getElementById('transfer-money-card').style.border = '2px solid #0874F2'
+        // document.getElementById('transfer-money-card').style.backgroundColor = '#0874F220'
+        document.getElementById('transfer-money-card').classList.remove('border-[#08080848]')
+        document.getElementById('transfer-money-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
 
 
@@ -153,13 +168,18 @@ document.getElementById('get-bonus-card')
             form.style.display = 'none'
         }
         document.getElementById('get-bonus-section').style.display = 'block'
+        // active status 
         const cards = document.getElementsByClassName('card')
         for (const card of cards) {
-            card.style.border = '2px solid #08080848'
-            card.style.backgroundColor = 'white'
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
         }
-        document.getElementById('get-bonus-card').style.border = '2px solid #0874F2'
-        document.getElementById('get-bonus-card').style.backgroundColor = '#0874F220'
+        // document.getElementById('get-bonus-card').style.border = '2px solid #0874F2'
+        // document.getElementById('get-bonus-card').style.backgroundColor = '#0874F220'
+        document.getElementById('get-bonus-card').classList.remove('border-[#08080848]')
+        document.getElementById('get-bonus-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
 
 // pay bill
@@ -170,11 +190,16 @@ document.getElementById('pay-bill-card')
             form.style.display = 'none'
         }
         document.getElementById('pay-bill-section').style.display = 'block'
+        // active status 
         const cards = document.getElementsByClassName('card')
         for (const card of cards) {
-            card.style.border = '2px solid #08080848'
-            card.style.backgroundColor = 'white'
+            // card.style.border = '2px solid #08080848'
+            // card.style.backgroundColor = 'white'
+            card.classList.remove('border-[#0874F2]', 'bg-[#0874F220]')
+            card.classList.add('border-[#08080848]')
         }
-        document.getElementById('pay-bill-card').style.border = '2px solid #0874F2'
-        document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
+        // document.getElementById('pay-bill-card').style.border = '2px solid #0874F2'
+        // document.getElementById('pay-bill-card').style.backgroundColor = '#0874F220'
+        document.getElementById('pay-bill-card').classList.remove('border-[#08080848]')
+        document.getElementById('pay-bill-card').classList.add('border-[#0874F2]', 'bg-[#0874F220]')
     })
